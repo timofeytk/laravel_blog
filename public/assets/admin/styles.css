@@ -1,0 +1,7 @@
+.card i{
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 50px;
+    color: #007bff;
+}
