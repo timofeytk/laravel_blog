@@ -11,12 +11,17 @@ class Category extends Model
 
     protected $fillable = ['title'];
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
     /**
      * Return the sluggable configuration array for this model.
      *
      * @return array
      */
-    public function sluggable(): array
+    public function sluggable()
     {
         return [
             'slug' => [
@@ -24,7 +29,6 @@ class Category extends Model
             ]
         ];
     }
-    public function posts(){
-        return $this->hasMany(Post::class);
-    }
+
 }
+
